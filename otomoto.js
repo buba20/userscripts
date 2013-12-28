@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       Otomoto.pl - remove top Ad banner
 // @namespace  http://use.i.E.your.homepage/
-// @version    0.3
+// @version    0.4
 // @icon       http://static-img.otomoto.pl/main/cobrand/1_0/img/favicon.ico
 // @icon64     http://static-img.otomoto.pl/main/cobrand/1_0/img/favicon.ico
 // @match      http://otomoto.pl/*
@@ -12,12 +12,10 @@
 (function () {
 
     function start() {
-        var parent = document.getElementById('topZoneBanner').parentNode;
-        parent.removeChild(document.getElementById('topZoneBanner'));
-
-        var parentU = document.getElementsByClassName('usabilla_live_button_container').parentNode;
-        parentU.removeChild(document.getElementsByClassName('usabilla_live_button_container'));
-
+        removeElement(document.getElementById('topZoneBanner'));
+        removeElement(document.getElementsByClassName('usabilla_live_button_container')[0]);
+        removeElement(document.getElementsByClassName('om-header-count om-header-counter')[0]);
+        removeElement(document.getElementsByClassName('om-btn-mobile om-md')[0]);
     }
 
     function removeElement(el) {
@@ -25,5 +23,5 @@
         parent.removeChild(el);
     }
 
-    return start();
+    start();
 })();
