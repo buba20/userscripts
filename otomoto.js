@@ -5,6 +5,8 @@
 // @icon       http://static-img.otomoto.pl/main/cobrand/1_0/img/favicon.ico
 // @icon64     http://static-img.otomoto.pl/main/cobrand/1_0/img/favicon.ico
 // @match      http://otomoto.pl/*
+// @updateURL       https://raw.github.com/buba20/userscripts/master/otomoto.meta.js
+// @downloadURL     https://raw.github.com/buba20/userscripts/master/otomoto.js     
 // @copyright  2012+, You
 // ==/UserScript==
 var parent = document.getElementById('topZoneBanner').parentNode;
@@ -12,4 +14,3 @@ parent.removeChild(document.getElementById('topZoneBanner'));
 
 var parentU = document.getElementsByClassName('usabilla_live_button_container').parentNode;
 parentU.removeChild(document.getElementsByClassName('usabilla_live_button_container'));
-
